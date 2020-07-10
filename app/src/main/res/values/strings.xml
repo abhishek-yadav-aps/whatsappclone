@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">whatsappclone</string>
     <string name="verify_number">Verify %s</string>
+    <string name="waiting_text">Waiting for automatically detect an SMS sent to %s. Wrong Number?</string>
 </resources>
