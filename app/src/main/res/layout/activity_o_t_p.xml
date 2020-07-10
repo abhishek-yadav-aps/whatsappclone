@@ -24,17 +24,33 @@
         android:textSize="16sp"
         android:textColor="@android:color/darker_gray"
         android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCounter"
+        android:gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="normal"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/etOTP"
-        android:textStyle="bold"
-        android:text="------"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:imeActionId="6"
+        android:imeActionLabel="Send"
+        android:imeOptions="actionUnspecified"
+        android:inputType="phone"
         android:letterSpacing="0.8"
-        android:textColor="@android:color/darker_gray"
+        android:maxLines="1"
+        android:maxLength="6"
+        android:hint="------"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textAlignment="center"
         android:textSize="24sp"
-        />
+        android:id="@+id/etOTP"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,5 +83,6 @@
         android:textSize="18sp"
         android:textStyle="normal"
         app:cornerRadius="5dp"
+        android:enabled="false"
         android:id="@+id/btnResendCode"/>
 </LinearLayout>
