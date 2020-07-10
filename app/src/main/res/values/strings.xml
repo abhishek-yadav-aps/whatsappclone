@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">whatsappclone</string>
+    <string name="verify_number">Verify %s</string>
 </resources>
