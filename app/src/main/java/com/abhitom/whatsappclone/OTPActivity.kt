@@ -66,11 +66,13 @@ class OTPActivity : AppCompatActivity(), View.OnClickListener {
                 if (e is FirebaseAuthInvalidCredentialsException) {
                     // Invalid request
                     // ...
+                    notifyUserAndRetry("Invalid Request. Try again!")
                 } else if (e is FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
                     // ...
+                    notifyUserAndRetry("SMS quota exceeded. Try again!")
                 }
-                notifyUserAndRetry("Your Phone Number Verification is failed. Try again!")
+
             }
 
             override fun onCodeSent(
@@ -93,6 +95,8 @@ class OTPActivity : AppCompatActivity(), View.OnClickListener {
                 if (::progressDialog.isInitialized) {
                     progressDialog.dismiss()
                 }
+                startActivity(Intent(this@OTPActivity, SignUpActivity::class.java))
+
             }
             else{
                 notifyUserAndRetry("Your Phone Number Verification is failed. Try again!")
